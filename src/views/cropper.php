@@ -2,7 +2,7 @@
 
 use yii\bootstrap\Html;
 use yii\web\View;
-
+use kartik\widgets\SwitchInput;
 /** @var $this View */
 /** @var $cropperOptions mixed */
 /** @var $inputOptions  mixed */
@@ -65,6 +65,13 @@ Html::button($browseLabel, [
 <div class="form-group">
 <label class="control-label">Personalnummer </label>
 <input type="number" class="form-control" id="pnr_<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][pnr]" value="<?= $cropperOptions['preview']['pnr'] ?>" />
+<label class="control-label">Löschen </label>
+<?php
+echo SwitchInput::widget(['name'=> $inputOptions['name'].'['.$unique.'][loeschen]',  'pluginOptions' => [
+        'onText' => 'Ja',
+        'offText' => 'Nein',
+    ]]);
+?>
 </div>
 
 <?php $this->registerCss('
