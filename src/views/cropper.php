@@ -34,7 +34,7 @@ if ($label !== false) {
 <input type="hidden" id="y_<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][y]" />
 <input type="hidden" id="w_<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][w]" />
 <input type="hidden" id="h_<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][h]" />
-
+<input type="hidden" id="r_<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][r]" />
 <div class="cropper-container ">
 
 
