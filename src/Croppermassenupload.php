@@ -1,7 +1,7 @@
 <?php
 
 namespace rklandesverband\imagecropmassenupload;
- 
+
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -44,7 +44,6 @@ class Croppermassenupload extends InputWidget
     public $label;
 
 
-
     public function init()
     {
         parent::init();
@@ -76,7 +75,6 @@ class Croppermassenupload extends InputWidget
     }
 
 
-
     private function setCropperOptions()
     {
         $options = $this->cropperOptions;
@@ -92,15 +90,15 @@ class Croppermassenupload extends InputWidget
         //if (!isset($options['preview']['height'])) $options['preview']['height'] = $options['preview']['width'] / $aspectRatio;
         if (!isset($options['preview']['height'])) $options['preview']['height'] = 200;
         $options['preview']['error'] == 1 ? $options['preview']['error'] : null;
-       $options['preview']['pnr'] != "" ? $options['preview']['pnr'] : "";
-       $options['preview']['basename'] != "" ? $options['preview']['basename'] : "";
+        $options['preview']['pnr'] != "" ? $options['preview']['pnr'] : "";
+        $options['preview']['basename'] != "" ? $options['preview']['basename'] : "";
         if (!isset($options['icons']['browse'])) $options['icons']['browse'] = '<i class="fa fa-image"></i>';
         if (!isset($options['icons']['crop'])) $options['icons']['crop'] = '<i class="fa fa-crop"></i>';
         if (!isset($options['icons']['close'])) $options['icons']['close'] = '<i class="fa fa-crop"></i>';
-
+        if (!isset($options['icons']['rotate-left'])) $options['icons']['rotate-left'] = '<i class="fa fa-rotate-left"></i>';
+        if (!isset($options['icons']['rotate-right'])) $options['icons']['rotate-right'] = '<i class="fa fa-rotate-right"></i>';
         $this->cropperOptions = $options;
     }
-
 
 
     private function setInputOptions()

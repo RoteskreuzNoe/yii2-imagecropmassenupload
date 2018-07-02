@@ -26,7 +26,6 @@ if ($label !== false) {
     $browseLabel = $cropperOptions['icons']['browse'] . ' ' . $label;
 }
 ?>
-
 <input type="hidden" id="<?= $inputOptions['id'] ?>_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>]" title="" >
 <input type="hidden" id="preview_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][preview]" title="" value="<?= $cropperOptions['preview']['image'] ?>">
 <input type="hidden" id="basename_<?= $unique ?>" name="<?= $inputOptions['name'] ?>[<?= $unique ?>][basename]" title="" value="<?= $cropperOptions['preview']['basename'] ?>">
@@ -265,6 +264,7 @@ $this->registerJs(<<<JS
                 
                 $('#w_personalfoto-image_$unique').val(Math.round(e.width));
                 $('#h_personalfoto-image_$unique').val(Math.round(e.height));
+                $('#r_personalfoto-image_$unique').val(e.rotate);
                 
                 if (options_$unique.data.width < options_$unique.data.cropWidth) {
                     options_$unique.element.modal.find('.width-warning').removeClass('has-success').addClass('has-error');
@@ -343,6 +343,7 @@ $this->registerJs(<<<JS
                 
                 $('#w_personalfoto-image_$unique').val(Math.round(e.width));
                 $('#h_personalfoto-image_$unique').val(Math.round(e.height));
+                $('#r_personalfoto-image_$unique').val(e.rotate);
                 
                 if (options_$unique.data.width < options_$unique.data.cropWidth) {
                     options_$unique.element.modal.find('.width-warning').removeClass('has-success').addClass('has-error');
